@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <title>Zombie Blog: Enter If You Dare</title>
+</head>
+<body>
+  <h1>Zombie Blog</h1>
+
+  <form  method="post">
+    <label>
+      <div>Title</div>
+      <input type="text" name="title">
+    </label>
+
+    <label>
+      <div>Post</div>
+      <textarea name="content" rows="10" cols="70"></textarea>
+    </label>
+
+    <div class="error">{{error}}</div>
+
+    <input type="submit">
+  </form>
+
+<hr>
+
+{% for content in contents %}
+   <div class="content">
+     <div class="content-subject">{{content.subject}}</div>
+     <pre class="content-body">{{content.content}}</pre>
+   </div>
+{% endfor %}
+
+</body>
+
+</html>
