@@ -245,7 +245,7 @@ class Login(BlogHandler):
 class Logout(BlogHandler):
     def get(self):
         self.logout()
-        self.redirect('/blog')
+        self.redirect('/signup')
 
 class Welcome(BlogHandler):
     def get(self):
